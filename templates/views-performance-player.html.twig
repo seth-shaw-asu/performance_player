@@ -1,0 +1,43 @@
+<div id="{{ id }}" {{ attributes.addClass(classes) }}>
+<div class="performance_player_player">
+    <div class="details">
+      <div class="now-playing">PLAYING x OF y</div>
+      <div class="track-name">Track Name</div>
+      <div class="composers">Track Artist(s)</div>
+    </div>
+    <div class="buttons">
+      <div class="prev-track" onclick="prevTrack()">
+        <i class="fa fa-step-backward fa-2x"></i>
+      </div>
+      <div class="play-pause" onclick="playpauseTrack()">
+        <i class="fa fa-play-circle fa-5x"></i>
+      </div>
+      <div class="next-track" onclick="nextTrack()">
+        <i class="fa fa-step-forward fa-2x"></i>
+      </div>
+    </div>
+    <div class="slider_container">
+      <div class="current-time">00:00</div>
+      <input type="range" min="1" max="100"
+        value="0" class="seek_slider" onchange="seekTo()">
+      <div class="total-duration">00:00</div>
+    </div>
+    <div class="slider_container">
+      <i class="fa fa-volume-down"></i>
+      <input type="range" min="1" max="100"
+        value="99" class="volume_slider" onchange="setVolume()">
+      <i class="fa fa-volume-up"></i>
+    </div>
+  </div>
+</div>
+{% set i = 0 %}
+{% set len = rows | length %}
+{% for key, row in rows -%}
+  <div class="tracks-playlist-track" id="tracks-playlist-track-{{i}}">
+    <div class="track-playlist-track-title">{{ row.title }}</div>
+    <div class="track-playlist-track-composers">{{ row.artists }}</div>
+    <div class="track-playlist-track-download"><a href="{{ row.trackUrl }}"><i class="fa fa-cloud-download-alt fa-2"></i></a></div>
+  </div>
+  {% set i = i + 1 %}
+{%- endfor %}
+</div>

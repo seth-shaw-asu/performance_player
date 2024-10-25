@@ -1,0 +1,4 @@
+name: 'Performance player'
+type: module
+description: Adds an audio player for multi-track audio items.
+core_version_requirement: ^10

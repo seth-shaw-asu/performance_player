@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * @file
+ * Performance Player module additions.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function performance_player_theme(array $existing, $type, $theme, $path) {
+  return [
+    'views_performance_player' => [
+      'template' => 'views-performance-player',
+      'file' => 'performance_player.theme.inc',
+    ],
+  ];
+}

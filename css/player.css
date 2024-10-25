@@ -1,0 +1,134 @@
+div.performance_player_player {
+  padding: 1rem;
+}
+/* Using flex with the column direction to
+   align items in a vertical direction */
+.performance_player_player .player {
+  height: 95vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.performance_player_player .details {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+/* Changing the font sizes to suitable ones */
+.details .now-playing {
+  font-size: 1rem;
+}
+
+.details .track-name,
+.details .composers {
+  font-size: 1.25rem;
+}
+/* Using flex with the row direction to
+     align items in a horizontal direction */
+.performance_player_player .buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.performance_player_player .playpause-track,
+.performance_player_player .prev-track,
+.performance_player_player .next-track {
+  padding: 25px;
+  opacity: 0.8;
+  /* Smoothly transition the opacity */
+  transition: opacity .2s;
+}
+/* Change the opacity when mouse is hovered */
+.performance_player_player .playpause-track:hover,
+.performance_player_player .prev-track:hover,
+.performance_player_player .next-track:hover {
+  opacity: 1.0;
+}
+/* Define the slider width so that it scales properly */
+.performance_player_player .slider_container {
+  /**
+  width: 75%;
+  max-width: 400px;
+  **/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Modify the appearance of the slider */
+.performance_player_player .seek_slider,
+.performance_player_player .volume_slider {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 5px;
+  background: black;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+/* Modify the appearance of the slider thumb */
+.performance_player_player .seek_slider::-webkit-slider-thumb,
+.performance_player_player .volume_slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: white;
+  cursor: pointer;
+  border-radius: 50%;
+}
+/* Change the opacity when mouse is hovered */
+.performance_player_player .seek_slider:hover,
+.performance_player_player .volume_slider:hover {
+  opacity: 1.0;
+}
+.performance_player_player .seek_slider {
+  width: 60%;
+}
+.performance_player_player .volume_slider {
+  width: 30%;
+}
+.performance_player_player .current-time,
+.performance_player_player .total-duration {
+  padding: 10px;
+}
+i.fa-volume-down,
+i.fa-volume-up {
+  padding: 10px;
+}
+/* Change the mouse cursor to a pointer
+     when hovered over */
+i.fa-play-circle,
+i.fa-pause-circle,
+i.fa-step-forward,
+i.fa-step-backward {
+  cursor: pointer;
+}
+
+div.tracks-playlist-track {
+    margin: 0;
+    padding: 1rem;
+    border: 1px solid grey;
+    cursor: pointer;
+}
+
+.tracks-playlist-track.playing {
+    border: 2px solid black;
+    background-color: lightgrey;
+}
+
+div.tracks-playlist-track .track-playlist-track-download {
+    float: right;
+}
+
+/** div.tracks-playlist-track .track-playlist-track-title, **/
+div.tracks-playlist-track .track-playlist-track-composers {
+    float: left;
+}
+
